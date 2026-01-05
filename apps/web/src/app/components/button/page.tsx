@@ -1,21 +1,13 @@
 "use client";
 
 import { Button } from "@rad-ui/ui";
-import { Download, Heart, Send, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Download, Heart, Send } from "lucide-react";
 
 export default function ButtonDemo() {
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
+    <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-5xl">
       {/* Header */}
       <div className="mb-12">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-4 transition-colors"
-        >
-          <ArrowRight className="h-4 w-4" />
-          بازگشت به خانه
-        </Link>
         <h1 className="text-4xl font-bold mb-4">دکمه (Button)</h1>
         <p className="text-lg text-muted-foreground">
           کامپوننت دکمه با پشتیبانی کامل از RTL و حالت تاریک
