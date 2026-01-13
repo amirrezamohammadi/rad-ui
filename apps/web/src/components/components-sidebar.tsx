@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Menu, MousePointer2, Minus, User, RectangleHorizontal, Keyboard } from "lucide-react";
+import { X, Menu, MousePointer2, Minus, User, RectangleHorizontal, Keyboard, BadgeCheck } from "lucide-react";
 import { cn } from "@rad-ui/ui";
 
 // Component list configuration
@@ -45,6 +45,12 @@ const componentCategories = [
         nameFA: "آواتار",
         href: "/components/avatar",
         icon: User,
+      },
+      {
+        name: "Badge",
+        nameFA: "نشان",
+        href: "/components/badge",
+        icon: BadgeCheck,
       },
       {
         name: "Kbd",
