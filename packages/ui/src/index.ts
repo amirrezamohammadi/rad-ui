@@ -8,4 +8,5 @@ export { Kbd, KbdGroup } from "./kbd";
 export type { KbdProps, KbdGroupProps } from "./kbd";
 export { Badge, badgeVariants } from "./badge";
 export type { BadgeProps } from "./badge";
+export { Label } from "./label";
 
