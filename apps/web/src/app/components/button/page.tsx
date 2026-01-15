@@ -29,6 +29,7 @@ export default function ButtonDemo() {
         <h2 className="text-2xl font-semibold mb-6">انواع (Variants)</h2>
         <div className="flex flex-wrap gap-4">
           <Button variant="default">پیش‌فرض</Button>
+          <Button variant="destructive">حذف</Button>
           <Button variant="outline">حاشیه‌دار</Button>
           <Button variant="ghost">شبح</Button>
           <Button variant="link">لینک</Button>
@@ -140,6 +141,22 @@ export default function ButtonDemo() {
               </Button>
             </div>
           </div>
+
+          {/* Destructive Variant */}
+          <div>
+            <h3 className="text-lg font-medium mb-4">حذف (Destructive)</h3>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button variant="destructive" size="sm">
+                کوچک
+              </Button>
+              <Button variant="destructive" size="md">
+                متوسط
+              </Button>
+              <Button variant="destructive" size="lg">
+                بزرگ
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -184,7 +201,7 @@ export default function ButtonDemo() {
               <tr className="border-b border-border">
                 <td className="p-4" dir="ltr"><code>variant</code></td>
                 <td className="p-4" dir="ltr">
-                  <code>"default" | "outline" | "ghost" | "link"</code>
+                  <code>"default" | "destructive" | "outline" | "ghost" | "link"</code>
                 </td>
                 <td className="p-4" dir="ltr"><code>"default"</code></td>
                 <td className="p-4">نوع ظاهری دکمه</td>
@@ -256,6 +273,7 @@ export default function ButtonDemo() {
             <h3 className="font-semibold mb-3">انتخاب نوع مناسب (Variant Selection)</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li><strong className="text-foreground">Default:</strong> برای اقدامات اصلی و مهم (مثل ثبت فرم)</li>
+              <li><strong className="text-foreground">Destructive:</strong> برای اقدامات خطرناک (مثل حذف، لغو دائم)</li>
               <li><strong className="text-foreground">Outline:</strong> برای اقدامات ثانویه (مثل لغو یا بازگشت)</li>
               <li><strong className="text-foreground">Ghost:</strong> برای اقدامات کم‌اهمیت یا تکراری</li>
               <li><strong className="text-foreground">Link:</strong> برای لینک‌هایی که مانند دکمه عمل می‌کنند</li>
@@ -288,6 +306,7 @@ export default function MyComponent() {
   return (
     <div>
       <Button>پیش‌فرض</Button>
+      <Button variant="destructive">حذف</Button>
       <Button variant="outline">حاشیه‌دار</Button>
       <Button variant="ghost">شبح</Button>
       <Button variant="link">لینک</Button>
