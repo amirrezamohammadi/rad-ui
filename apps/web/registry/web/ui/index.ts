@@ -1,6 +1,15 @@
 export { cn } from "../lib/utils";
 export { Button, buttonVariants } from "./button";
 export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  useCarousel,
+} from "./carousel/carousel";
+export type { CarouselApi, CarouselOptions, CarouselPlugin } from "./carousel/carousel";
+export {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,

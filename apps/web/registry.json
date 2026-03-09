@@ -59,6 +59,24 @@
       "files": [{ "path": "registry/web/ui/button.tsx", "type": "registry:ui" }]
     },
     {
+      "name": "carousel",
+      "type": "registry:ui",
+      "description": "A carousel with motion and swipe built using Embla",
+      "platform": "web",
+      "dependencies": [
+        "embla-carousel-react@^8.0.0",
+        "class-variance-authority@^0.7.1",
+        "lucide-react@^0.309.0"
+      ],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/web/ui/carousel/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "chart",
       "type": "registry:ui",
       "description": "Chart components built on Recharts with tooltip and legend",
