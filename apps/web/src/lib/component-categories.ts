@@ -35,6 +35,7 @@ import {
   BarChart3,
   AlertTriangle,
   Info,
+  Image,
   type LucideIcon,
 } from "lucide-react";
 
@@ -191,6 +192,13 @@ export const componentCategories: ComponentCategory[] = [
         href: "/components/card",
         icon: SquareStack,
         description: "گروه‌بندی محتوا و اقدامات مرتبط",
+      },
+      {
+        name: "Carousel",
+        nameFA: "کاروسل",
+        href: "/components/carousel",
+        icon: Image,
+        description: "کاروسل با انیمیشن و سوایپ برای نمایش اسلایدها",
       },
       {
         name: "Separator",
