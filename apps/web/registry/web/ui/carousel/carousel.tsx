@@ -61,6 +61,7 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
     const dirValue = dir ?? "rtl";
     const [carouselRef, api] = useEmblaCarousel(
       {
+        align: "center",
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
         direction: dirValue,
@@ -110,7 +111,7 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
         <div
           ref={ref}
           dir={dirValue}
-          className={cn("relative w-full", className)}
+          className={cn("relative w-full px-12", className)}
           {...props}
         >
           {children}
@@ -124,7 +125,7 @@ Carousel.displayName = "Carousel";
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+>(({ className, children, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel();
   return (
     <div ref={carouselRef} className="overflow-hidden">
@@ -133,12 +134,14 @@ const CarouselContent = React.forwardRef<
         className={cn(
           "flex size-full min-w-0",
           orientation === "horizontal"
-            ? "-ms-4 flex-row ms-4"
-            : "-mt-4 flex-col",
+            ? "flex-row gap-4"
+            : "flex-col gap-4",
           className
         )}
         {...props}
-      />
+      >
+        {children}
+      </div>
     </div>
   );
 });
@@ -156,7 +159,6 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "ps-4" : "pt-4",
         className
       )}
       {...props}
@@ -177,8 +179,7 @@ const CarouselPrevious = React.forwardRef<
       size={size}
       className={cn(
         "absolute h-10 w-10 shrink-0 rounded-full p-0 rtl:rotate-180",
-        "start-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2",
-        "rtl:translate-x-1/2",
+        "start-0 top-1/2 -translate-y-1/2",
         className
       )}
       disabled={!canScrollPrev}
@@ -204,8 +205,7 @@ const CarouselNext = React.forwardRef<
       size={size}
       className={cn(
         "absolute h-10 w-10 shrink-0 rounded-full p-0 rtl:rotate-180",
-        "end-1/2 translate-x-1/2 -translate-y-1/2 top-1/2",
-        "rtl:-translate-x-1/2",
+        "end-0 top-1/2 -translate-y-1/2",
         className
       )}
       disabled={!canScrollNext}

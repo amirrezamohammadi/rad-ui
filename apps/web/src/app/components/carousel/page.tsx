@@ -106,6 +106,8 @@ export default function CarouselPage() {
           titleEn="Basic"
           description="کاروسل ساده با کارت‌ها و دکمه‌های ناوبری."
           code={basicCode}
+          previewCentered={true}
+          previewClassName="min-h-[280px]"
         >
           <BasicCarouselExample />
         </ComponentExample>
@@ -115,6 +117,8 @@ export default function CarouselPage() {
           titleEn="Sizes"
           description="استفاده از basis-1/3 برای نمایش سه اسلاید هم‌زمان."
           code={sizesCode}
+          previewCentered={true}
+          previewClassName="min-h-[200px]"
         >
           <SizesCarouselExample />
         </ComponentExample>
