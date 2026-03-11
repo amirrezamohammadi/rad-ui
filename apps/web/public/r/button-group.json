@@ -1,0 +1,24 @@
+{
+  "name": "button-group",
+  "type": "registry:ui",
+  "description": "Groups related buttons together with consistent styling",
+  "platform": "web",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "ui/button-group/button-group.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { type VariantProps, cva } from \"class-variance-authority\";\n\nimport { cn } from \"../../lib/utils\";\n\nconst buttonGroupVariants = cva(\n  \"inline-flex items-stretch gap-0 rounded-md\",\n  {\n    variants: {\n      orientation: {\n        horizontal: \"flex-row\",\n        vertical: \"flex-col\",\n      },\n    },\n    defaultVariants: {\n      orientation: \"horizontal\",\n    },\n  }\n);\n\nexport interface ButtonGroupProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof buttonGroupVariants> {}\n\nconst ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(\n  ({ className, orientation, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        role=\"group\"\n        className={cn(buttonGroupVariants({ orientation }), className)}\n        {...props}\n      />\n    );\n  }\n);\n\nButtonGroup.displayName = \"ButtonGroup\";\n\nconst buttonGroupSeparatorVariants = cva(\"bg-border\", {\n  variants: {\n    orientation: {\n      horizontal: \"mx-px my-1 w-px self-stretch\",\n      vertical: \"my-px mx-1 h-px w-full\",\n    },\n  },\n  defaultVariants: {\n    orientation: \"vertical\",\n  },\n});\n\nexport interface ButtonGroupSeparatorProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof buttonGroupSeparatorVariants> {}\n\nconst ButtonGroupSeparator = React.forwardRef<\n  HTMLDivElement,\n  ButtonGroupSeparatorProps\n>(({ className, orientation, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      aria-hidden=\"true\"\n      className={cn(\n        buttonGroupSeparatorVariants({ orientation }),\n        className\n      )}\n      {...props}\n    />\n  );\n});\n\nButtonGroupSeparator.displayName = \"ButtonGroupSeparator\";\n\nconst buttonGroupTextVariants = cva(\n  \"inline-flex items-center text-sm text-muted-foreground\"\n);\n\nexport interface ButtonGroupTextProps\n  extends React.HTMLAttributes<HTMLSpanElement>,\n    VariantProps<typeof buttonGroupTextVariants> {\n  asChild?: boolean;\n}\n\nconst ButtonGroupText = React.forwardRef<HTMLSpanElement, ButtonGroupTextProps>(\n  ({ asChild, className, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"span\";\n\n    return (\n      <Comp\n        ref={ref}\n        className={cn(buttonGroupTextVariants(), className)}\n        {...props}\n      />\n    );\n  }\n);\n\nButtonGroupText.displayName = \"ButtonGroupText\";\n\nexport { ButtonGroup, ButtonGroupSeparator, ButtonGroupText };\n\n"
+    }
+  ],
+  "utils": {
+    "path": "lib/utils.ts",
+    "content": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\n"
+  }
+}
