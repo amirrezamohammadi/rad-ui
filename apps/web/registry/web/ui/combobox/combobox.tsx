@@ -202,7 +202,7 @@ const ComboboxOption = React.forwardRef<
             className={cn(
               "flex w-full cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm outline-none",
               isSelected
-                ? "bg-accent text-accent-foreground"
+                ? "bg-muted text-foreground"
                 : "hover:bg-accent hover:text-accent-foreground",
               className
             )}
