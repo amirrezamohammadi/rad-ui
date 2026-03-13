@@ -163,7 +163,7 @@ const ComboboxPopover = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "absolute z-50 mt-1 w-full min-w-[12rem] rounded-md border border-border bg-popover text-popover-foreground shadow-md",
+        "absolute z-50 mt-1 w-full min-w-[12rem] rounded-md border border-border bg-background text-foreground shadow-md",
         "max-h-72 overflow-y-auto overflow-x-hidden py-1 text-sm",
         className
       )}
