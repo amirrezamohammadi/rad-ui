@@ -129,7 +129,11 @@ const ComboboxTrigger = React.forwardRef<
       dir="rtl"
       role="combobox"
       aria-expanded={false}
-      onClick={() => setOpen(true)}
+      onClick={() => {
+        // وقتی کاربر دوباره روی تریگر کلیک می‌کند، همه آیتم‌ها را نشان بده
+        setInputValue("");
+        setOpen(true);
+      }}
       {...props}
     >
       <input
