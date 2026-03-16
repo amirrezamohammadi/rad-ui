@@ -139,6 +139,23 @@
       ]
     },
     {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "description": "Displays a menu of actions triggered by a right click",
+      "platform": "web",
+      "dependencies": [
+        "@radix-ui/react-context-menu@^2.1.6",
+        "lucide-react@^0.309.0"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web/ui/context-menu/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "chart",
       "type": "registry:ui",
       "description": "Chart components built on Recharts with tooltip and legend",
