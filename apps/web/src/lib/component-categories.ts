@@ -272,6 +272,13 @@ export const componentCategories: ComponentCategory[] = [
         description: "منوی دستور برای جستجو و اقدامات سریع",
       },
       {
+        name: "Context Menu",
+        nameFA: "منوی زمینه",
+        href: "/components/context-menu",
+        icon: Menu,
+        description: "نمایش منو با کلیک راست روی نواحی خاص",
+      },
+      {
         name: "Dropdown Menu",
         nameFA: "منوی کشویی",
         href: "/components/dropdown-menu",
