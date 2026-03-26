@@ -80,7 +80,7 @@ export default function SidebarPage() {
           description="یک سایدبار ساده با آیتم‌های منو و دکمه Trigger."
           code={basicCode}
           previewCentered={false}
-          previewClassName="p-0 overflow-hidden"
+          previewClassName="p-0 overflow-hidden relative"
         >
           <BasicExample />
         </ComponentExample>
@@ -91,7 +91,7 @@ export default function SidebarPage() {
           description="مدیریت وضعیت سایدبار با state بیرونی."
           code={controlledCode}
           previewCentered={false}
-          previewClassName="p-0 overflow-hidden"
+          previewClassName="p-0 overflow-hidden relative"
         >
           <ControlledExample />
         </ComponentExample>

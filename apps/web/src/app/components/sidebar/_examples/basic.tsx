@@ -36,7 +36,7 @@ export default function SidebarBasicExample() {
       <Sidebar
         side="right"
         collapsible="icon"
-        className="!absolute !inset-y-0 !right-0 !left-auto"
+        className="!absolute !inset-y-0"
       >
         <SidebarContent>
           <SidebarGroup>
@@ -85,7 +85,7 @@ export default function BasicExample() {
       <Sidebar
         side="right"
         collapsible="icon"
-        className="!absolute !inset-y-0 !right-0 !left-auto"
+        className="!absolute !inset-y-0"
       >
         <SidebarContent>
           <SidebarGroup>

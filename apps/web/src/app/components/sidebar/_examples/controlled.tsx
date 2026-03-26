@@ -45,7 +45,7 @@ export default function SidebarControlledExample() {
         side="right"
         variant="inset"
         collapsible="offcanvas"
-        className="!absolute !inset-y-0 !right-0 !left-auto"
+        className="!absolute !inset-y-0"
       >
         <SidebarContent>
           <SidebarGroup>
@@ -105,7 +105,7 @@ export default function ControlledExample() {
         side="right"
         variant="inset"
         collapsible="offcanvas"
-        className="!absolute !inset-y-0 !right-0 !left-auto"
+        className="!absolute !inset-y-0"
       >
         <SidebarContent>
           <SidebarGroup>

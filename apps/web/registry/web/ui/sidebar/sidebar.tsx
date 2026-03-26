@@ -247,6 +247,7 @@ const Sidebar = React.forwardRef<
             "group-data-[variant=inset]:p-2 group-data-[variant=inset]:group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+theme(spacing.4))]",
             className
           )}
+          data-side={side}
           {...props}
         >
           <div
