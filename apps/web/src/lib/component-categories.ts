@@ -307,6 +307,13 @@ export const componentCategories: ComponentCategory[] = [
         icon: Menu,
         description: "مجموعه لینک‌ها برای ناوبری وب‌سایت با محتوای کشویی",
       },
+      {
+        name: "Sidebar",
+        nameFA: "نوار کناری",
+        href: "/components/sidebar",
+        icon: PanelLeft,
+        description: "نوار کناری قابل جمع‌شدن با گروه‌ها و آیتم‌های ناوبری",
+      },
     ],
   },
   {

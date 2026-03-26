@@ -682,6 +682,31 @@
       ]
     },
     {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "description": "A composable, themeable, and customizable sidebar component",
+      "platform": "web",
+      "dependencies": [
+        "@radix-ui/react-slot@^1.1.0",
+        "class-variance-authority@^0.7.1",
+        "lucide-react@^0.309.0"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/web/ui/sidebar/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "sonner",
       "type": "registry:ui",
       "description": "An opinionated toast component with Toaster and toast helpers",

@@ -491,6 +491,24 @@
     "registryDependencies": []
   },
   {
+    "name": "sidebar",
+    "description": "A composable, themeable, and customizable sidebar component",
+    "platform": "web",
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "input",
+      "separator",
+      "sheet",
+      "skeleton",
+      "tooltip"
+    ]
+  },
+  {
     "name": "sonner",
     "description": "An opinionated toast component with Toaster and toast helpers",
     "platform": "web",
